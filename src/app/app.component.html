@@ -1,0 +1,163 @@
+<div class="main-container">
+  <header class="header-2">
+    <div class="branding">
+      <a class="nav-link">
+        <cds-icon shape="tnz-logo" size="lg"></cds-icon>
+        <span class="title">VMware Tanzu Platform</span>
+      </a>
+    </div>
+    <div class="header-nav">
+      <!-- <a class="active nav-link nav-text">Home</a> -->
+    </div>
+    <clrx-versions #version></clrx-versions>
+  </header>
+  <div class="content-container">
+    <!-- <clr-vertical-nav>
+      <a clrVerticalNavLink class="active">Charmander</a>
+      <div class="nav-divider"></div>
+      <a clrVerticalNavLink>Charmander</a>
+      <a clrVerticalNavLink>Charmander</a>
+    </clr-vertical-nav> -->
+
+    <!-- <clr-vertical-nav
+      [clrVerticalNavCollapsible]="true"
+      [(clrVerticalNavCollapsed)]="collapse"
+    >
+      <ng-container *ngFor="let item of navItems">
+        <clr-vertical-nav-group *ngIf="item['children']">
+          <cds-icon
+            [attr.shape]="item.icon"
+            *ngIf="item['icon']"
+            clrVerticalNavIcon
+          ></cds-icon>
+          {{ item.label }}
+          <ng-template clrIfExpanded>
+            <clr-vertical-nav-group-children>
+              <a
+                clrVerticalNavLink
+                href="javascript:void(0)"
+                *ngFor="let childItem of item.children"
+              >
+                {{ childItem.label }}
+              </a>
+            </clr-vertical-nav-group-children>
+          </ng-template>
+        </clr-vertical-nav-group>
+
+        <a
+          clrVerticalNavLink
+          href="javascript:void(0)"
+          *ngIf="!item['children']"
+        >
+          <cds-icon
+            [attr.shape]="item.icon"
+            *ngIf="item['icon']"
+            clrVerticalNavIcon
+          ></cds-icon>
+          {{ item.label }}
+        </a>
+      </ng-container>
+    </clr-vertical-nav> -->
+
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true">
+      <a clrVerticalNavLink>
+        <cds-icon shape="home" clrVerticalNavIcon></cds-icon>
+        Home</a
+      >
+      <clr-vertical-nav-group>
+        <cds-icon shape="home" clrVerticalNavIcon></cds-icon>Explore
+        <clr-vertical-nav-group-children *clrIfExpanded>
+          <a clrVerticalNavLink>Search</a>
+          <a clrVerticalNavLink>Applications</a>
+          <a clrVerticalNavLink>Kubernetes</a>
+          <a clrVerticalNavLink>Repositories</a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <clr-vertical-nav-group>
+        <cds-icon shape="home" clrVerticalNavIcon></cds-icon>
+        Applications
+        <clr-vertical-nav-group-children *clrIfExpanded>
+          <a clrVerticalNavLink>Business Applications</a>
+          <a clrVerticalNavLink> Applications & Micro Services</a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <div class="nav-divider"></div>
+      <clr-vertical-nav-group>
+        <cds-icon shape="home" clrVerticalNavIcon></cds-icon>
+        Security Posture
+        <clr-vertical-nav-group-children *clrIfExpanded>
+          <a clrVerticalNavLink>Overview</a>
+          <a clrVerticalNavLink>Findings</a>
+          <a clrVerticalNavLink>Policies</a>
+          <a clrVerticalNavLink>Reports</a>
+          <a clrVerticalNavLink>Suppressions</a>
+          <a clrVerticalNavLink>Remediations</a>
+          <a clrVerticalNavLink>Worker Groups</a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <clr-vertical-nav-group>
+        <cds-icon shape="home" clrVerticalNavIcon></cds-icon>
+        Transformer
+        <clr-vertical-nav-group-children *clrIfExpanded>
+          <a clrVerticalNavLink>Overview</a>
+          <a clrVerticalNavLink>Inventory & Discovery</a>
+          <a clrVerticalNavLink>Assessments</a>
+          <a clrVerticalNavLink>Move Groups</a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+    </clr-vertical-nav>
+
+    <div class="content-area">
+      <clr-tabs>
+        <clr-tab>
+          <button clrTabLink>Datagrid</button>
+          <clr-tab-content *clrIfActive>
+            <clr-datagrid>
+              <clr-dg-column>User ID</clr-dg-column>
+              <clr-dg-column>Name</clr-dg-column>
+              <clr-dg-column>Creation date</clr-dg-column>
+              <clr-dg-column>Favorite color</clr-dg-column>
+
+              <clr-dg-row *ngFor="let user of [1, 2, 3]">
+                <clr-dg-cell>123</clr-dg-cell>
+                <clr-dg-cell>123</clr-dg-cell>
+                <clr-dg-cell>123</clr-dg-cell>
+                <clr-dg-cell>123</clr-dg-cell>
+              </clr-dg-row>
+
+              <clr-dg-footer>123 users</clr-dg-footer>
+            </clr-datagrid>
+          </clr-tab-content>
+        </clr-tab>
+        <clr-tab>
+          <button clrTabLink>Card</button>
+          <clr-tab-content *clrIfActive>
+            <div class="clr-row">
+              <div class="clr-col-lg-5 clr-col-md-8 clr-col-12">
+                <div class="card">
+                  <div class="card-header">Header</div>
+                  <div class="card-block">
+                    <div class="card-title">Block</div>
+                    <div class="card-text">
+                      Card content can contain text, links, images, data
+                      visualizations, lists and more.
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-sm btn-link">Footer Action 1</button>
+                    <button class="btn btn-sm btn-link">Footer Action 2</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </clr-tab-content>
+        </clr-tab>
+
+        <clr-tab>
+          <button clrTabLink>Tab</button>
+          <clr-tab-content *clrIfActive>...</clr-tab-content>
+        </clr-tab>
+      </clr-tabs>
+    </div>
+  </div>
+</div>

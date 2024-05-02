@@ -1,0 +1,198 @@
+body[cds-theme='dark'] {
+  // layout
+  --vr-layer-elevation-0: #111218;
+  --vr-layer-elevation-1: #191c24;
+  --vr-layer-elevation-2: #212530;
+  --vr-layer-decoration: #2a2e3c;
+  --vr-layer-header: #1d202a;
+  --vr-layer-border: #08090c;
+  --vr-layer-interaction: #005da3;
+
+  // typography
+  --vr-primary: #e7e7ee;
+  --vr-secondary: #c3c4d5;
+  --vr-tertiary: #9698b5;
+  --vr-quarternary: #787ba0;
+  --vr-quinary: #545678;
+  --vr-invert: #08090c;
+  --vr-link: #2483cc;
+  --vr-danger: #d25164;
+  --vr-success: #61a60e;
+
+  //severity
+  --vr-severity-critical: rgb(203, 37, 62);
+  --vr-severity-critical-darker: rgba(203, 37, 62, 0.2);
+  --vr-severity-high: rgb(230, 94, 40);
+  --vr-severity-high-darker: rgba(230, 94, 40, 0.2);
+  --vr-severity-medium: rgb(230, 140, 40);
+  --vr-severity-medium-darker: rgba(230, 140, 40, 0.2);
+  --vr-severity-low: rgb(243, 186, 22);
+  --vr-severity-low-darker: rgba(243, 186, 22, 0.2);
+  --vr-severity-info: rgb(0, 152, 199);
+  --vr-severity-info-darker: rgba(0, 152, 199, 0.2);
+  --vr-severity-success: rgb(97, 166, 14);
+  --vr-severity-success-darker: rgba(97, 166, 14, 0.2);
+  --vr-severity-neutral: rgb(120, 123, 160);
+  --vr-severity-neutral-darker: rgba(120, 123, 160, 0.2);
+  --vr-severity-empty: rgb(17, 18, 24);
+  --vr-severity-empty-darker: rgb(17, 18, 24);
+
+  //categorical
+  --vr-categorical-1: #0088ef;
+  --vr-categorical-2: #a468ee;
+  --vr-categorical-3: #01b9c6;
+  --vr-categorical-4: #e0d160;
+  --vr-categorical-5: #1d428a;
+  --vr-categorical-6: #6c4b94;
+  --vr-categorical-7: #35798b;
+  --vr-categorical-8: #9ea045;
+  // semantic value for unused/overridden tokens
+  --vr-unused: rgba(0, 0, 0, 0);
+
+  // *** Visual Refresh redefinitions ***
+  --clr-font: initial;
+  --clr-vertical-nav-content-gap: 0;
+  --clr-btn-vertical-margin: 0;
+  --clr-card-block-padding: 12px 18px;
+  --clr-p1-color: var(--vr-secondary);
+  --clr-color-neutral-600: var(--vr-secondary);
+
+  --severity-color-impact: var(--vr-severity-critical); // -> critical???
+
+  --severity-color-high: var(--vr-severity-high); // -> high
+
+  --severity-color-medium: var(--vr-severity-medium); // -> medium
+
+  --severity-color-low: var(--vr-severity-low); // -> low
+
+  // blue 400 is used for both buttons and info border color.
+  // VR splits this into vr-link and (vr-info + opacity) colors
+  --cds-global-color-blue-400: var(--vr-link);
+  --cds-global-color-blue-800: var(--vr-severity-info);
+  --clr-alert-info-bg-color: var(--vr-severity-info);
+  --clr-alert-info-border-color: var(--vr-severity-info-darker);
+  --severity-color-good: var(--vr-severity-info); // -> info
+
+  --severity-color-resolved: var(--vr-severity-success);
+
+  --severity-color-unknown: var(--vr-severity-neutral); // -> neutral
+
+  // status colors
+  --cds-global-color-green-500: var(--vr-severity-success);
+  --cds-global-color-red-500: var(--vr-danger);
+
+  --cds-global-color-construction-100: var(--vr-secondary);
+  --cds-global-color-construction-200: var(--vr-tertiary);
+  --cds-global-color-construction-300: var(--vr-layer-elevation-2);
+  --cds-global-color-construction-500: var(--vr-layer-border);
+  --cds-global-color-construction-600: var(--vr-layer-decoration);
+  --cds-global-color-construction-800: var(--vr-layer-header);
+  --cds-global-color-construction-900: var(--vr-layer-elevation-1);
+  --cds-global-color-construction-1000: var(--vr-layer-elevation-0);
+  --cds-global-color-cool-gray-1000: var(--vr-layer-elevation-1);
+  --cds-global-color-black: var(--vr-invert);
+
+  --cds-global-typography-font-family: 'Metropolis', 'Avenir Next', sans-serif;
+
+  --main-header-background-color-dark: var(--vr-layer-elevation-1);
+  --main-header-text-color-dark: var(--vr-secondary);
+  --font-color: var(--vr-secondary);
+  --page-background: var(--vr-layer-elevation-0);
+  --card-main-text: var(--vr-secondary);
+  --font-emphasis-color: var(--vr-primary);
+  --btn-icon-color: var(--vr-secondary);
+  --clr-btn-default-disabled-color: var(--vr-tertiary);
+  --clr-btn-default-disabled-border-color: var(--vr-layer-decoration);
+  --font-emphasis-color: var(--vr-primary);
+
+  --clr-header-8-bg-color: var(--vr-layer-elevation-1);
+
+  // clarity overrides
+  .btn {
+    vertical-align: top !important;
+  }
+  .card {
+    box-shadow: none !important;
+  }
+  .datagrid-detail-open .datagrid-placeholder-container,
+  .datagrid-detail-open .datagrid-row {
+    border-right: 0.05rem solid var(--vr-layer-border) !important;
+  }
+  .datagrid .datagrid-column {
+    /* 10 Caps */
+    font-family: Metropolis;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4; /* 14px; */ /* 140% */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .datagrid-table .datagrid-column .datagrid-column-title {
+    color: var(--vr-tertiary, #9698b5);
+  }
+  .datagrid {
+    background-color: unset;
+    border: unset;
+  }
+  .datagrid-footer {
+    border-left: unset;
+    border-right: unset;
+  }
+  .datagrid-row:hover,
+  .datagrid-row:hover .datagrid-row-sticky {
+    // background-color: var(--clr-datagrid-row-hover-color, hsl(198, 0%, 91%));
+    background-color: #191b24;
+  }
+  header {
+    border-bottom: 1px solid var(--Layer-border, #08090c);
+  }
+
+  --header-height: 2.5rem; // 50px
+  --clr-header-branding-logo-size: var(--header-height);
+  --clr-header-title-color: var(--vr-primary);
+  .main-container header,
+  .main-container .header {
+    flex-basis: var(--header-height);
+  }
+  header .branding,
+  header .settings,
+  header .header-nav,
+  header .header-actions,
+  .header .settings,
+  .header .header-nav,
+  .header .header-actions {
+    height: var(--header-height);
+    overflow: hidden;
+  }
+  header .branding,
+  .header .branding {
+    align-items: center;
+  }
+  header .branding .clr-icon,
+  header .branding cds-icon,
+  header .branding clr-icon,
+  .header .branding .clr-icon,
+  .header .branding cds-icon,
+  .header .branding clr-icon {
+    height: unset;
+    width: unset;
+    // min-width: min-content;
+    // min-height: unset;
+    align-content: center;
+    flex-shrink: 0;
+    // margin-right: var(--clr-header-branding-icon-gap, 0.45rem);
+  }
+  header .branding,
+  .header .branding {
+    padding-left: 0.5rem;
+  }
+  header .branding .clr-icon,
+  header .branding cds-icon,
+  header .branding clr-icon,
+  .header .branding .clr-icon,
+  .header .branding cds-icon,
+  .header .branding clr-icon {
+    margin-right: 0.1rem;
+  }
+}
